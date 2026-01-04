@@ -25,7 +25,10 @@ namespace ResourceBooking.Api
 
             app.UseAuthorization();
 
-
+            app.MapGet("/health", () =>
+            {
+                return  Results.Ok(); 
+            });
             app.MapControllers();
 
             app.Run();
