@@ -1,3 +1,11 @@
 <Solution>
-  <Project Path="ResourceBooking.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/">
+    <Project Path="ResourceBooking.Api/ResourceBooking.Api.csproj" Id="c4c99217-b50b-4fe9-84c3-6ea27369b3b9" />
+  </Folder>
+  <Folder Name="/src/Application/" />
+  <Folder Name="/src/Domain/" />
+  <Folder Name="/src/Infrastructure/" />
+  <Folder Name="/src/Web/" />
+  <Folder Name="/tests/" />
 </Solution>

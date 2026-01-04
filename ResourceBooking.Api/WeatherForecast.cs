@@ -1,4 +1,4 @@
-namespace ResourceBooking
+namespace ResourceBooking.Api
 {
     public class WeatherForecast
     {

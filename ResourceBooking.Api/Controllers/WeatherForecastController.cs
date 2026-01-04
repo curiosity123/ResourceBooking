@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ResourceBooking.Controllers
+namespace ResourceBooking.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

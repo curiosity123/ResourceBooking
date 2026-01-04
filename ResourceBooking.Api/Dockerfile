@@ -12,19 +12,19 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ResourceBooking.csproj", "."]
-RUN dotnet restore "./ResourceBooking.csproj"
+COPY ["ResourceBooking.Api/ResourceBooking.Api.csproj", "ResourceBooking.Api/"]
+RUN dotnet restore "./ResourceBooking.Api/ResourceBooking.Api.csproj"
 COPY . .
-WORKDIR "/src/."
-RUN dotnet build "./ResourceBooking.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/ResourceBooking.Api"
+RUN dotnet build "./ResourceBooking.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./ResourceBooking.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./ResourceBooking.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ResourceBooking.dll"]
+ENTRYPOINT ["dotnet", "ResourceBooking.Api.dll"]
