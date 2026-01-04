@@ -1,11 +1,25 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".dockerignore" />
+    <File Path=".gitignore" />
+  </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/API/">
     <Project Path="ResourceBooking.Api/ResourceBooking.Api.csproj" Id="c4c99217-b50b-4fe9-84c3-6ea27369b3b9" />
   </Folder>
-  <Folder Name="/src/Application/" />
-  <Folder Name="/src/Domain/" />
-  <Folder Name="/src/Infrastructure/" />
+  <Folder Name="/src/Application/">
+    <Project Path="ResourceBooking.Application/ResourceBooking.Application.csproj" Id="d4e34d6b-5050-482d-9ac7-6fb39c1ef2ad" />
+  </Folder>
+  <Folder Name="/src/Domain/">
+    <Project Path="ResourceBooking.Domain/ResourceBooking.Domain.csproj" Id="9d326289-2cba-4de2-8791-b2fbe7893f51" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="ResourceBooking.Infrastructure/ResourceBooking.Infrastructure.csproj" Id="1050d568-6536-4d58-88d1-6bd5ce0793a8" />
+  </Folder>
   <Folder Name="/src/Web/" />
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="ResourceBooking.Api.IntegrationTests/ResourceBooking.Api.IntegrationTests.csproj" Id="56541700-7dd7-4b11-86a3-5cbef311e856" />
+    <Project Path="ResourceBooking.Application.Tests/ResourceBooking.Application.Tests.csproj" Id="d5a89f6d-9469-4559-9ed8-b53243036a6a" />
+    <Project Path="ResourceBooking.Domain.Tests/ResourceBooking.Domain.Tests.csproj" Id="4514b5bc-2a44-47da-8749-ca6287ff4c7a" />
+  </Folder>
 </Solution>
