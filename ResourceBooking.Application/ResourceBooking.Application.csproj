@@ -10,4 +10,14 @@
     <ProjectReference Include="..\ResourceBooking.Domain\ResourceBooking.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstractions\" />
+    <Folder Include="Reservations\Commands\CancelReservation\" />
+    <Folder Include="Reservations\Queries\GetMyReservations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
+  </ItemGroup>
+
 </Project>
